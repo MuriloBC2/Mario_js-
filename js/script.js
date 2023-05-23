@@ -1,6 +1,6 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
-
+var butao = document.querySelector('.button')
 
 
 const jump =() =>{
@@ -30,9 +30,18 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '50px'
 
         clearInterval(loop)
+
+        var carrega = function(){
+            window.location.reload()
+        }
+        
+        document.addEventListener('keydown', carrega)
     }
 
 }
 ,10)
 
+
 document.addEventListener('keydown', jump)
+
+
